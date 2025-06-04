@@ -9,8 +9,8 @@ Todolist
     -DONE Create database model for userprofiles
     -DONE Make it possbible to sing up
     -DONE Make it possbible to log in
-    -Make it possbible to log out
--Simple dashboard
+    -DONE Make it possbible to log out
+-DONE Simple dashboard
 -Create new leads
 -Convert leads to clients
 -Change and delete client
