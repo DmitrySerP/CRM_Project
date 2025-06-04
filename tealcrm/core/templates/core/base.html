@@ -15,13 +15,19 @@
             
             <div class="space-x-4">
                 <a href="{% url 'about'%}" class="text-white">About</a>
-                <a href="{% url 'logout' %}" class="py-3 px-4 bg-red-600 rounded-xl text-white">Log out</a>
+                {% if request.user.is_authenticated %}
+                    <form method="post" action="{% url 'logout' %}" class="inline">
+                        {% csrf_token %}
+                        <button type="submit" class="py-3 px-4 bg-red-600 rounded-xl text-white border-0 
+                        cursor-pointer">Log out</button>
+                    </form>
+                {% else %}
+                    <a href="{% url 'login'%}" class="py-3 px-4 bg-teal-600 rounded-xl text-white"> Log in</a>
+                    <a href="{% url 'signup' %}" class="py-3 px-4 bg-teal-300 rounded-xl text-white">Sign up</a>
+                {% endif %}
                 
-                <a href="{% url 'login'%}" class="py-3 px-4 bg-teal-600 rounded-xl text-white"> Log in</a>
-                <a href="{% url 'signup' %}" class="py-3 px-4 bg-teal-300 rounded-xl text-white">Sign up</a>
                 
-                
-            <div>
+            </div>
         </nav> 
         
         {% block content %}
@@ -29,6 +35,6 @@
 
         <footer class="py-8 text-center bg-gray-200">
             <p class="text-xs text-gray-700">Copyright (c) 2025 - Teal CRM</p>
-        <footer>
+        </footer>
     </body>
 </html>
