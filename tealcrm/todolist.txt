@@ -14,8 +14,8 @@ Todolist
 -Create new leads
     -DONE New django app
     -DONE Database model
-    -Views/Forms for leads
-    -List out leads
+    -DONE Views/Forms for leads
+    -DONE List out leads
     -View detail page of leads
 -Convert leads to clients
 -Change and delete client

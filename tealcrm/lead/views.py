@@ -14,6 +14,14 @@ def leads_list(request):
     })
 
 @login_required
+def leads_detail(request, pk):
+    lead = Lead.objects.filter(create_by=request.user).get(pk=pk)
+    
+    return render(request, 'lead/leads_detail.html', {
+        'lead' : lead
+    })
+
+@login_required
 def add_lead(request):
     if request.method == 'POST':
         form = AddLeadForm(request.POST)
