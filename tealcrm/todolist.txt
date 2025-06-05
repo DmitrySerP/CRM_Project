@@ -12,6 +12,11 @@ Todolist
     -DONE Make it possbible to log out
 -DONE Simple dashboard
 -Create new leads
+    -DONE New django app
+    -DONE Database model
+    -Views/Forms for leads
+    -List out leads
+    -View detail page of leads
 -Convert leads to clients
 -Change and delete client
 -Implement solution for teams
